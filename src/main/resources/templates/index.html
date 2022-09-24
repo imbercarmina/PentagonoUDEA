@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <script src="jquery/jquery.js"></script>
+    <script type="text/javascript" src='js/bootstrap.min.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</head>
+<header>
+    <div class="cabecera" style="background-color:#68CCC4; height: 93px;">
+        <div class="row">
+            <div class="col-9">
+                <img src="Images/Logo.svg" style="padding: 20px; margin-left: 50px  ;"  alt="">
+            </div>
+            <div class="col -2" style="margin-top: 20px;">
+                <p class="text-right" style="float: right ;"></pclass><strong>!Hola! Nombre</strong> <br>
+                    Rol
+                </p>
+            </div>
+            <div class="col-1" style="float: left ;">
+                <img src="Imagenes/Lina.png" style="width: 51px; height: 51px; margin-top: 20px; float: left; "  alt="">
+            </div>
+        </div>
+    </div>
+</header>
+<div class="row justify-content-right">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%; height: 41px; background-color:#1F76BA;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center" style = "background-color: #1F76BA; color: aliceblue; width: 100%; height: 41px;">
+                    <li class="nav-item active" >
+                        <a th:href="@{/}" class="nav-link" style = "color: #ffff ;">Inicio</a><!--Yulieth-->
+                    </li>
+
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="color:#ffff;">
+                            Empresas
+                        </a>
+                        <ul th:href="@{/}" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a th:href="@{/enterpriseS}" class="dropdown-item" href="see_enterprise.html">Ver</a></li>
+                            <li><a th:href="@{/enterpriseN}"class="dropdown-item" href="new_enterprise.html">Crear</a></li>
+                        </ul>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#"  id="navbarDropdown4" role="button" data-bs-toggle="dropdown" aria-expanded="false"style="color:#ffff;">
+                            Empleados
+                        </a>
+                        <ul th:href="@{/}" class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                            <li><a th:href="@{/employeeS}" class="dropdown-item" href="see_employee.html">Ver</a></li>
+                            <li><a th:href="@{/employeeN}" class="dropdown-item" href="new_employee.html">Crear</a></li>
+
+                        </ul>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#ffff;">
+                            Movimientos
+                        </a>
+                        <ul th:href="@{/}" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a th:href="@{/transactionS}" class="dropdown-item" href="see_transaction.html">Ver</a></li>
+                            <li><a th:href="@{/transactionN}" class="dropdown-item" href="new_transaction.html">Agregar</a></li>
+
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    </ul>
+</div>
+
+<body style="background:url(/frontEnd/Imagenes/fondo.svg)">
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-sm-6 order-2 order-sm-1 ">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class="p-4: background-color: #1F76BA">QUIENES SOMOS</h1>
+            <br>
+            <br>
+            <p> <strong>EMPLAS S.A.</strong>  Es una empresa colombiana cuyo objetivo es la generación de industria, por medio
+                de elementos sostenibles, por ende, esta empresa conformada por 5 emprendedores súper tesos
+                tienen como objetivo utilizar elementos biodegradables, con el fin de reutilizarlos
+                en la industria de la moda.
+            </p>
+        </div>
+        <div class="col-sm-6 order-1 order-sm-2 ">
+            <br>
+            <br>
+            <img src="Imagenes/ilsutracion home.svg" alt="">
+        </div>
+        <div class="col-sm-12 order-3 background-color: #ffffff">
+            <H2 class="p-4">Nuestro equipo</H2>
+
+            <div class="row align-items-start">
+                <div class="col"><img src="Imagenes/Jess.png" style= "width:105px">
+                    <br>
+                    <h5>Jessica Ramírez</h5>
+                    <p>Desarrolladora</p></div>
+
+                <div class="col"><img src="Imagenes/Yuli.png" style= "width:105px">
+                    <br>
+                    <h5>Yulieth Montes</h5>
+                    <p>Desarrolladora</p></div>
+
+                <div class="col"><img src="Imagenes/yo.png" style= "width: 105px">
+                    <br>
+                    <h5>Esteban Chitiva</h5>
+                    <p>Scrum master</p></div>
+
+                <div class="col"><img src="Imagenes/Alex.png" style= "width: 105px">
+                    <br>
+                    <h5>Alexander Rincón</h5>
+                    <p>Analista</p></div>
+
+                <div class="col"><img src="Imagenes/Lina.png" style= "width:105px">
+                    <br>
+                    <h5>Lina Hernández</h5>
+                    <p>Analista BD</p></div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+
+</html>
